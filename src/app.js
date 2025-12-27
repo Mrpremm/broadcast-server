@@ -12,3 +12,8 @@ app.get("/health",(req,res)=>{
 
 const http=require('http');
 const server=http.createServer(app);
+const io=new Server(server,{
+  cors:{
+    origin:"*",
+  },
+});
